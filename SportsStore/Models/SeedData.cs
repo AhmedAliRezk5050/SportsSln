@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SportsStore.Models;
 
+// study
 public static class SeedData
 {
   public static void EnsurePopulated(IApplicationBuilder app)

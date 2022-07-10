@@ -16,6 +16,7 @@ namespace SportsStore.Pages
 
         public Cart? Cart { get; set; }
 
+        // study
         public string ReturnUrl { get; set; } = "/";
 
         public void OnGet(string returnUrl)
@@ -34,6 +35,7 @@ namespace SportsStore.Pages
                 Cart.AddItem(product, 1);
                 HttpContext.Session.SetJson("cart", Cart);
             }
+            // study
             return RedirectToPage(new { returnUrl = returnUrl });
         }
     }

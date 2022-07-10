@@ -9,6 +9,7 @@ namespace SportsStore.Infrastructure
         }
         public static T? GetJson<T>(this ISession session, string key)
         {
+            // study
             var sessionData = session.GetString(key);
             return sessionData == null
             ? default : JsonSerializer.Deserialize<T>(sessionData);

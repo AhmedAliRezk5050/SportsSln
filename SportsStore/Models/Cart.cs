@@ -21,6 +21,7 @@
                 line.Quantity += quantity;
             }
         }
+
         public virtual void RemoveLine(Product product) =>
         Lines.RemoveAll(l => l.Product.ProductID == product.ProductID);
 

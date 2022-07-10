@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="compilerconfig.json" />
     <None Include="wwwroot\lib\bootstrap\scss\bootstrap-grid.scss" />
     <None Include="wwwroot\lib\bootstrap\scss\bootstrap-reboot.scss" />

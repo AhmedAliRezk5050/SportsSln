@@ -26,6 +26,7 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 builder.Services.AddSession();
 
+builder.Services.AddServerSideBlazor();
 
 var app = builder.Build();
 
@@ -52,6 +53,10 @@ new { Controller = "Home", action = "Index", productPage = 1 });
 app.MapDefaultControllerRoute();
 
 app.MapRazorPages();
+
+app.MapBlazorHub();
+
+app.MapFallbackToPage("/admin/{*catchall}", "/Admin/Index");
 
 SeedData.EnsurePopulated(app);
 

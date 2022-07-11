@@ -1,5 +1,6 @@
 ﻿@page
 @model IdentityUsersModel
+@using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Identity
 
 <h3 class="bg-primary text-white text-center p-2">Admin User</h3>
@@ -10,7 +11,10 @@
         <tr><th>Phone</th><td>@Model.AdminUser.PhoneNumber</td></tr>
     </tbody>
 </table>
+
 @functions {
+
+    [Authorize]
     public class IdentityUsersModel : PageModel
     {
         private UserManager<IdentityUser> userManager;
